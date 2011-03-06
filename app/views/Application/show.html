@@ -1,0 +1,9 @@
+#{extends 'main.html' /}
+#{set title: employee?.firstName + ' ' + employee?.lastName /}
+
+#{if employee}
+${employee.firstName} ${employee.lastName}
+${employee.email} ${employee.hiredAt}
+${employee.location} ${employee.techno}
+#{/if}
+

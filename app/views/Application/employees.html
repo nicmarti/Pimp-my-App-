@@ -1,0 +1,62 @@
+#{extends 'main.html' /}
+#{set title:'Table' /}
+
+#{if employees}
+<div id="items">
+    <div id="contentTab">
+        <div id="mask"></div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Prénom</th>
+                    <th>Nom</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                #{list employees, as:'employee'}
+                    <tr>
+                        <td>${employee.firstName}</td>
+                        <td>${employee.lastName}</td>
+                        <td>${employee.email}</td>
+                        <td>#{a @show(employee.id)}Détails#{/a}</td>
+                    </tr>
+                #{/list}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">
+                        <span class="current">Page ${current} sur ${max}</span>
+                        <span class="pages">[
+                            #{list pages, as:'p'}
+                                #{if p != current }
+                                <a href="@{employees(p)}" class="page">${p}</a>
+                                #{/if}
+                                #{else}
+                                ${p}
+                                #{/else}
+                                ${p_isLast ? '' : '-'}
+                            #{/list}
+                            ]
+                        </span>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+#{/if}
+#{else}
+<p>Pas d'employé dans la base</p>
+#{/else}
+
+<script type="text/javascript" charset="utf-8">
+    $('a.page').live('click', function(e) {
+        e.preventDefault();
+        var href = $(this).attr('href') ;
+        $('#items').addClass('loading').load(href + ' #contentTab', function() {
+            $('#items').removeClass('loading') ;
+        })
+    })
+</script>

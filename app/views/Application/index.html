@@ -1,4 +1,8 @@
 #{extends 'main.html' /}
-#{set title:'Home' /}
+#{set title:'Bienvenue' /}
 
-#{welcome /}
+<h1>Présentation de l'entité</h1>
+<P>Voici quelques exemples de page pour montrer différents exemples de mise en page.</P>
+<P>Nombre d'employé : ${numberOfEmployees}</P>
+
+#{a @employees()}Tableau paginé#{/a}

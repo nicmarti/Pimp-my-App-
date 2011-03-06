@@ -1,0 +1,39 @@
+Employee(z0):
+ email: pierre@letesteur.fr
+ firstName: Pierre
+ lastName: Letesteur
+ hiredAt: 01/01/2010
+ techno: Java, JEE5, JEE6, Websphere,JBoss,Performance,Tuning,JMeter
+ location: Paris
+
+Employee(z1):
+ email: nmartin@gmail.com
+ firstName: Nicolas
+ lastName: Martin
+ hiredAt: 20/10/2010
+ techno: Scrum,Agile,Java,Javascript,Groovy,Websphere,Tomcat,JBoss,Geronimo,Spring
+ location: Paris
+
+Employee(z2):
+ email: pierre1@test.fr
+ firstName: Jacques
+ lastName: Test1
+ hiredAt: 21/02/2010
+ location: Bordeaux
+ techno: Adobe Flex,GWT,Flash,Javascript,HTML,Web,CSS,Design web
+
+Employee(z3):
+ email: patrick.durand@test.fr
+ firstName: Patrick
+ lastName: Durand
+ hiredAt: 02/04/2010
+ location: Marseille
+ techno: Spring,Portlet,J2EE,Architecture,Finance de marché
+
+Employee(z4):
+ email: Christophe@test.fr
+ firstName: Christophe
+ lastName: Test3
+ hiredAt: 12/01/2009
+ location: Lyon
+ techno: Assurance,Spring,J2EE,JEE5,JEE6,Agile,Scrum,Apache Camel,Lucene,Velocity,Tomcat
