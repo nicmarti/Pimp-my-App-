@@ -37,3 +37,13 @@ Employee(z4):
  hiredAt: 12/01/2009
  location: Lyon
  techno: Assurance,Spring,J2EE,JEE5,JEE6,Agile,Scrum,Apache Camel,Lucene,Velocity,Tomcat
+
+User(u1):
+  username: nicmarti
+  password: nicmarti
+  isAdmin: false
+
+User(u2):
+  username: admin
+  password: admin
+  isAdmin: true
