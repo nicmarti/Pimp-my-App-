@@ -38,6 +38,23 @@ public class Application extends Controller {
     public static void show(Long id) {
         Employee employee = Employee.findById(id);
         render(employee);
+    }
 
+    public static void button(){
+        render();
+    }
+
+    public static void listFilter(){
+        List<Employee> listOfEmployees=Employee.findAll();
+        render(listOfEmployees);
+    }
+
+
+    public static void niceForm(){
+        render();
+    }
+
+    public static void create(Employee employee){
+        niceForm();
     }
 }

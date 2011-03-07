@@ -1,10 +1,77 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-    <title></title>
-</head>
-<body>
+#{extends 'main.html' /}
+#{set title: 'Effets simples avec CSS3'/}
 
-</body>
-</html>
+<P>Auparavant il était nécessaire de dessiner des images afin de réaliser des boutons et des
+    éléments dégradés. Les nouvelles propriétés CSS3 simplifient le travail et permettent
+    de rendre plus facilement des effets graphiques simples. Il est possible
+    de créer des dégradés pour Firefox, Internet Explorer et Chrome/Safari (voir <a
+            href="http://webdesignerwall.com/tutorials/cross-browser-css-gradient">cet
+        article</a>)</P>
+
+<h3>1. Balise border-radius</h3>
+<style>
+    .exemple1 {
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border: 1px solid black;
+        padding: 2px 5px;
+    }
+</style>
+
+<P><span class="exemple1">Exemple 1</span></P>
+
+<h3>2. Ajout d'un dégradé</h3>
+<style>
+    .exemple2 {
+        font-size: 18px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 4px;
+        padding-right: 4px;
+        color: black;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border: 1px solid #9acd32;
+        background: -moz-linear-gradient(-90deg, #91bd09, #749a02);
+        background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#749a02)); /* for webkit browsers */
+        text-shadow: -1px -1px 1px yellow;
+    }
+</style>
+
+<P>
+<button class="exemple2">Exemple 2</button></P>
+
+
+<h3>3. Ajout d'une ombre portée</h3>
+<style>
+    .exemple3 {
+        font-size: 18px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 4px;
+        padding-right: 4px;
+        color: black;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border: 1px solid #9acd32;
+        background: -moz-linear-gradient(-90deg, green, yellow);
+        background: -webkit-gradient(linear, left top, left bottom, from(yellow), to(green)); /* for webkit browsers */
+        text-shadow: -1px -1px 1px yellow;
+        -moz-box-shadow: 3px 3px 3px rgba(0,0,0,5);
+        /* -webkit-box-shadow: hoff voff blur color; */
+        -webkit-box-shadow: 3px 3px 5px rgba(0,0,0,2);
+    }
+</style>
+
+<P><button class="exemple3">Exemple 3</button></P>
+
+
+<h3>4. Différents styles</h3>
+
+
+<a class="super button pink">Pink Button</a>
+ <a class="large button green">Green Button</a>
+<a class="large button blue">Blue Button</a>
+        <a class="large button red">Red Button</a>
+        <li><a class="large button orange">Orange Button</a>
+        <a class="large button yellow">Yellow Button</a>

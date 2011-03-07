@@ -1,8 +1,11 @@
 #{extends 'main.html' /}
 #{set title:'Bienvenue' /}
 
-<h1>Présentation de l'entité</h1>
-<P>Voici quelques exemples de page pour montrer différents exemples de mise en page.</P>
-<P>Nombre d'employé : ${numberOfEmployees}</P>
-
-#{a @employees()}Tableau paginé#{/a}
+<P>List des astuces et des exemples présentés</P>
+        <ul>
+            <li>#{a @employees()}Pagination d'un tableau#{/a}, chargement de chaque page avec Ajax</li>
+            <li>#{a @button()}Dessiner des boutons avec CSS3#{/a}</li>
+            <li>#{a @listFilter()}Recherche filtrée#{/a}</li>
+            <li>#{a @niceForm()}Formulaire#{/a}</li>
+            <li>#{a @SecureController.login()}Authentification et autorisation#{/a}</li>
+        </ul>

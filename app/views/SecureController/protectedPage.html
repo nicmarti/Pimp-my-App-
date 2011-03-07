@@ -1,10 +1,13 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-    <title></title>
-</head>
-<body>
+#{extends 'main.html' /}
+#{set title:'Page protégée' /}
 
-</body>
-</html>
+        <P><strong>Utilisateur authentifié : </strong>${user.username} </P>
+        <P><strong>Administrateur ? </strong>${user.isAdmin} </P>
+
+        #{showForAdmin isAdmin:user.isAdmin}
+            <div><h3>Admin panel</h3>
+            <P>Un panel pour les administrateurs uniquement.</P>
+            </div>
+        #{/showForAdmin}
+
+        #{a @logout(), class:'button red'}Logout#{/a}

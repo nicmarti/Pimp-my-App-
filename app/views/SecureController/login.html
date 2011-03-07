@@ -1,3 +1,28 @@
 #{extends 'main.html' /}
 #{set title:'Authentification' /}
 
+#{form @SecureController.authenticate(), class:'niceForm'}
+<fieldset>
+
+    #{if flash.error}
+    <div class="errorBox">${flash.error}</div>
+    #{/if}
+
+    #{field 'username'}
+    <label>Votre nom d'utilisateur :
+      <input type="text" id="${field.id}" name="${field.name}" value="${field.value}" class="${field.errorClass}"
+              placeholder="Votre identifiant" tabindex="1" autofocus required>
+      <span class="labelError">${field.error}</span></label>
+    #{/}
+
+    #{field 'password'}
+    <label>Votre mot de passe :
+      <input type="text" id="${field.id}" name="${field.name}" value="${field.value}" class="${field.errorClass}"
+              placeholder="Votre mot de passe" tabindex="2"  required>
+      <span class="labelError">${field.error}</span></label>
+    #{/}
+    <input type="submit" value="S'authentifier"/>
+
+</fieldset>
+#{/form}
+
