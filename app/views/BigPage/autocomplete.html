@@ -1,0 +1,27 @@
+#{extends 'main.html' /}
+#{set title:'Autocomplete' /}
+
+#{set 'moreScripts'}
+    <link type="text/css" rel="stylesheet" href="/public/yuibuild/cssfonts/fonts-min.css" />
+    <script type="text/javascript" src="/public/yuibuild/yui/yui-min.js"></script>
+
+#{/set}
+
+<h3>Recherche par région</h3>
+<div id="demo">
+  <input id="ac-input" type="text" placeholder="Entrer le nom d'une région" size="50">
+</div>
+
+<script type="text/javascript">
+YUI().use("autocomplete", "autocomplete-highlighters", function (Y) {
+ // Add the yui3-skin-sam class to the body so the default
+  // AutoComplete widget skin will be applied.
+  Y.one('body').addClass('yui3-skin-sam');
+
+  Y.one('#ac-input').plug(Y.Plugin.AutoComplete, {
+    maxResults: 100,
+    minQueryLength:1,
+    source: '/bigpage/search?q={query}'
+  });
+});
+</script>

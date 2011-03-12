@@ -40,10 +40,10 @@ Employee(z4):
 
 User(u1):
   username: nicmarti
-  password: nicmarti
+  encryptedPassword: nicmarti
   isAdmin: false
 
 User(u2):
   username: admin
-  password: admin
+  encryptedPassword: admin
   isAdmin: true

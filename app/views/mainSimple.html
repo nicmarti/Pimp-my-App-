@@ -4,83 +4,146 @@
 <head>
     <title>#{get 'title' /}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" type="text/css" media="screen" href="@{'/public/stylesheets/main.css'}">
-    <link rel="stylesheet" type="text/css" media="screen" href="@{'/public/stylesheets/theme1/style.css'}">
-    <link rel="stylesheet" type="text/css" media="screen" href="@{'/public/stylesheets/theme1/superfish.css'}">
     #{get 'moreStyles' /}
     <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
-    <script src="@{'/public/javascripts/jquery-1.4.2.min.js'}" type="text/javascript" charset="utf-8"></script>
-    <script src="@{'/public/javascripts/theme1/superfish.js'}" type="text/javascript" charset="utf-8"></script>
-
-
-    <script type="text/javascript">
-        jQuery(document).ready(function() {
-            jQuery('ul.nav').superfish({
-                delay:       0,                            // one second delay on mouseout
-                animation:   {opacity:'show',height:'show'},  // fade-in and slide-down animation
-                speed:       'fast',                          // faster animation speed
-                autoArrows:  false,                           // disable generation of arrow mark-up
-                dropShadows: false                            // disable drop shadows
-            });
-        });
-    </script>
-
     #{get 'moreScripts' /}
+
+<style type="text/css">
+/*margin and padding on body element
+  can introduce errors in determining
+  element position and are not recommended;
+  we turn them off as a foundation for YUI
+  CSS treatments. */
+body {
+	margin:0;
+	padding:0;
+}
+</style>
+
+<link type="text/css" rel="stylesheet" href="/public/yuibuild/cssfonts/fonts-min.css" />
+
+
+<!--begin custom header content for this example-->
+<style type="text/css">
+/* custom styles for this example */
+.dt-example {margin:1em;}
+
+/* css to counter global site css */
+.dt-example th {text-transform:none;}
+.dt-example table {width:auto;}
+.dt-example caption {display:table-caption;}
+</style>
+<!--end custom header content for this example-->
+
+
 </head>
 <body class="yui3-skin-sam  yui-skin-sam">
 
+<!--wrapper-->
 <div id="wrapper">
+
+    <!--header-->
     <div id="header">
+
         <div id="logo">
             <a href="/">Pimp My App</a>
 
         </div>
+        <!--logo end-->
+
     </div>
+    <!-- header end-->
+
+    <!--menu-->
+
     <div class="menu">
+
+        <!--nav bar-->
+
         <div id="navbar">
             <ul class="nav">
 
             </ul>
         </div>
+        <!--nav bar end-->
         <div id="search-header">
             <!--search form-->
-				    <!--<form method="get" id="search" action="http://wp-themes.com">-->
 
-					<!--<div>-->
-					<!--<input type="submit" id="searchsubmit" value="" />-->
-               		<!--<input type="text" value="Search" name="s" id="s"  onfocus="if(this.value=='Search'){this.value=''};" onblur="if(this.value==''){this.value='Search'};" tabindex="2"  />-->
+				    <form method="get" id="search" action="http://wp-themes.com">
 
-					<!--</div>-->
-               		<!--</form>-->
+					<div>
+					<input type="submit" id="searchsubmit" value="" />
+               		<input type="text" value="Search" name="s" id="s"  onfocus="if(this.value=='Search'){this.value=''};" onblur="if(this.value==''){this.value='Search'};" tabindex="2"  />
+
+					</div>
+               		</form>
+
+
         </div>
+        <!--search header end-->
+
     </div>
+    <!--menu end-->
+
+
+    <!--content-->
     <div id="content">
+
         <div id="left-col">
             <div class="post-head-single">
+
                 <h1>#{get 'title'/}</h1>
+
             </div>
+            <!--post-heading end-->
+
             <div class="meta-data">
+                <!--posted on in the_category | Comments-->
             </div>
+            <!--meta data end-->
+
             <div class="post-entry">
                   #{doLayout /}
                 <div class="clear"></div>
+
             </div>
+            <!--post-entry end-->
+
         </div>
+        <!--left-col end-->
+
+        <!--right-col-->
                 <div id="right-col">
+
+                        <!--sidebar-->
                         <div id="sidebar">
                           #{get 'rightBar' /}
+
                         </div><!--sb end-->
+
                     </div> <!--right-col-->
+
+
     </div>
+    <!--content end-->
+
+
+
 </div>
+<!--footer-->
 <div class="clear"></div>
+
 <div id="footer">
+
     <div id="footer-desc">
         <div id="blog-info"></div>
     </div>
 
     <div id="footer-widget">
+
     </div>
+    <!--footer widget end-->
+
     <div class="clear"></div>
 </div>
 <!--footer end-->

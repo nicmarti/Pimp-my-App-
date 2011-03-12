@@ -3,5 +3,5 @@
 
 # User(bob):
 #   email: bob@gmail.com
-#   password: secret
+#   encryptedPassword: secret
 #   fullname: Bob
