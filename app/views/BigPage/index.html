@@ -1,0 +1,66 @@
+#{extends 'main.html' /}
+#{set title:'Test Big Table' /}
+
+<h3>Nombre d'entrées : ${count}</h3>
+
+
+#{if flash.success}
+<div class="greenBox">
+    ${flash.success}
+</div>
+#{/if}
+#{if bigList}
+
+#{form @index(),method:'GET'}
+        charger la page: <input type="text" name="page" value="${page}" placeholder="page"/> -
+        pageSize: <input type="text" name="pageSize" value="${pageSize}" placeholder="elements par page"/>
+        <br/>
+        <input type="submit" class="button green" value="Charger"/>
+#{/form}
+
+<div id="items">
+    <div id="contentTab">
+        <div id="mask"></div>
+        <table>
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Product</th>
+                    <th>Localisation</th>
+                    <th>Segment</th>
+                    <th>Period</th>
+                    <th>Indicator</th>
+                </tr>
+            </thead>
+            <tbody>
+                #{list bigList, as:'bigTableR'}
+                    <tr>
+                        <td>${bigTableR.id}</td>
+                        <td>${bigTableR.product}</td>
+                        <td>${bigTableR.segment}</td>
+                        <td>${bigTableR.localisation}</td>
+                        <td>${bigTableR.period}</td>
+                        <td>${bigTableR.indicator}</td>
+                    </tr>
+                #{/list}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5">
+                        <span class="current">Page ${current} sur ${totalPages}</span> <br/>
+                        <span class="pages">
+                                #{a @BigPage.index(0,pageSize)}Première page#{/a} ...
+                        </span>
+                        <span class="pages">
+                                #{a @BigPage.index(totalPages,pageSize)}Page ${totalPages}#{/a}
+                        </span>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+#{/if}
+#{else}
+<p>Plage de valeur incorrecte.</p>
+#{/else}

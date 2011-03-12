@@ -1,0 +1,73 @@
+#{extends 'main.html' /}
+#{set title:'Pimp My App Tableau YahooUI' /}
+
+#{set 'moreScripts'}
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="/public/yuibuild/widget/assets/skins/sam/widget.css">
+<link rel="stylesheet" type="text/css" href="/public/yuibuild/datatable/assets/skins/sam/datatable.css">
+<link type="text/css" rel="stylesheet" href="/public/yuibuild/cssfonts/fonts-min.css" />
+
+<!-- JS -->
+<script type="text/javascript" src="/public/yuibuild/yui/yui-min.js"></script>
+
+<style type="text/css">
+body {
+	margin:0;
+	padding:0;
+}
+#custom-doc { width: 95%; min-width: 950px; }
+#pagetitle {background-image: url(/public/yuibuild/assets/bg_hd.gif);}
+#mychart {
+    margin:10px 10px 10px 10px;
+    width:90%;
+    max-width: 800px;
+    height:400px;
+}
+</style>
+
+
+#{/set}
+
+#{a @BigPage.yahooTableSorted()}Tableau trié#{/a}<br/>
+
+#{if bigList}
+<div id="mychart"></div>
+
+
+
+<script type="text/javascript">
+YUI().use('charts', function (Y)
+{
+    var myDataValues = [
+        {category:"5/1/2010", miscellaneous:2000, expenses:3700, revenue:2200},
+        {category:"5/2/2010", miscellaneous:50, expenses:9100, revenue:100},
+        {category:"5/3/2010", miscellaneous:400, expenses:1100, revenue:1500},
+        {category:"5/4/2010", miscellaneous:200, expenses:1900, revenue:2800},
+        {category:"5/5/2010", miscellaneous:5000, expenses:5000, revenue:2650}
+    ];
+
+    var mychart = new Y.Chart({
+                        dataProvider:myDataValues,
+                        render:"#mychart",
+                        horizontalGridlines: {
+                            styles: {
+                                line: {
+                                    color: "#dad8c9"
+                                }
+                            }
+                        },
+                        verticalGridlines: {
+                            styles: {
+                                line: {
+                                    color: "#dad8c9"
+                                }
+                            }
+                        }
+                    });
+});
+</script>
+#{/if}
+#{else}
+    <p>Base vide ? Tu es pas en mode in-memory ?</p>
+#{/else}
