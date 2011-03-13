@@ -1,93 +1,60 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
+    <meta charset=utf-8/>
+    <meta name="viewport" content="width=900"/>
     <title>#{get 'title' /}</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" type="text/css" media="screen" href="@{'/public/stylesheets/main.css'}">
-    <link rel="stylesheet" type="text/css" media="screen" href="@{'/public/stylesheets/theme1/style.css'}">
-    <link rel="stylesheet" type="text/css" media="screen" href="@{'/public/stylesheets/theme1/superfish.css'}">
+    <link rel="stylesheet" href="/public/stylesheets/html5.css" type="text/css"/>
+
+
     #{get 'moreStyles' /}
-    <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
-    <script src="@{'/public/javascripts/jquery-1.4.2.min.js'}" type="text/javascript" charset="utf-8"></script>
-    <script src="@{'/public/javascripts/theme1/superfish.js'}" type="text/javascript" charset="utf-8"></script>
 
+    <!-- Internet Explorer HTML5 enabling script: -->
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <style type="text/css">
 
-    <script type="text/javascript">
-        jQuery(document).ready(function() {
-            jQuery('ul.nav').superfish({
-                delay:       0,                            // one second delay on mouseout
-                animation:   {opacity:'show',height:'show'},  // fade-in and slide-down animation
-                speed:       'fast',                          // faster animation speed
-                autoArrows:  false,                           // disable generation of arrow mark-up
-                dropShadows: false                            // disable drop shadows
-            });
-        });
-    </script>
+        .clear {
+            zoom: 1;
+            display: block;
+        }
+    </style>
+    <![endif]-->
 
     #{get 'moreScripts' /}
+
 </head>
+
 <body class="yui3-skin-sam  yui-skin-sam">
 
-<div id="wrapper">
-    <div id="header">
-        <div id="logo">
-            <a href="/">Pimp My App</a>
+<section id="page">
 
-        </div>
-    </div>
-    <div class="menu">
-        <div id="navbar">
-            <ul class="nav">
-
+    <header>
+        <h1>Pimp My App</h1>
+        <nav class="clear"> <!-- The nav link semantically marks your main site navigation -->
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="#article2">Page1</a></li>
+                <li><a href="#article3">Page2</a></li>
             </ul>
-        </div>
-        <div id="search-header">
-            <!--search form-->
-				    <!--<form method="get" id="search" action="http://wp-themes.com">-->
+        </nav>
+    </header>
 
-					<!--<div>-->
-					<!--<input type="submit" id="searchsubmit" value="" />-->
-               		<!--<input type="text" value="Search" name="s" id="s"  onfocus="if(this.value=='Search'){this.value=''};" onblur="if(this.value==''){this.value='Search'};" tabindex="2"  />-->
+    <div class="line"></div>
 
-					<!--</div>-->
-               		<!--</form>-->
-        </div>
-    </div>
-    <div id="content">
-        <div id="left-col">
-            <div class="post-head-single">
-                <h1>#{get 'title'/}</h1>
-            </div>
-            <div class="meta-data">
-            </div>
-            <div class="post-entry">
-                  #{doLayout /}
-                <div class="clear"></div>
-            </div>
-        </div>
-                <div id="right-col">
-                        <div id="sidebar">
-                          #{get 'rightBar' /}
-                        </div><!--sb end-->
-                    </div> <!--right-col-->
-    </div>
-</div>
-<div class="clear"></div>
-<div id="footer">
-    <div id="footer-desc">
-        <div id="blog-info"></div>
-    </div>
+    <article>
+        <h1>#{get 'title'/}</h1>
+        #{doLayout /}
+    </article>
+    <aside>
+        #{get 'rightBar' /}
+    </aside>
+</section>
 
-    <div id="footer-widget">
-    </div>
-    <div class="clear"></div>
-</div>
-<!--footer end-->
-<div id="footer-info">
-    <span id="copyright">Copyright(c) 2011 <a href="http://touilleur-express.fr/">Nicolas Martignole</a>  | Powered by <a href="http://www.playframework.org">Play! Framework v1.1</a></span>
-</div>
-
+<footer>
+    Copyright(c) 2011 <a href="http://touilleur-express.fr/">Nicolas Martignole</a> | Powered by <a
+        href="http://www.playframework.org">Play! Framework v1.1</a>
+</footer>
 
 </body>
 

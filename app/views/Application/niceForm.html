@@ -1,6 +1,11 @@
 #{extends 'main.html' /}
 #{set title: 'Nice Form' /}
 
+
+#{set 'moreScripts'}
+<script src="@{'/public/javascripts/jquery-1.4.2.min.js'}" type="text/javascript" charset="utf-8"></script>
+#{/set}
+
 #{form @Application.create(), class:'niceForm'}
 <fieldset>
     <legend>Créer un nouvel employé</legend>

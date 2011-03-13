@@ -17,7 +17,6 @@ public class User extends Model {
         this.isAdmin = b;
     }
 
-
     public static User createAdmin(String username, String password) {
         User u = new User(username, password, true);
         return u;

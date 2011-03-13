@@ -1,7 +1,5 @@
 package controllers;
 
-import com.google.common.base.Function;
-import com.google.common.collect.Lists;
 import models.BigTableR;
 import models.BigTable_R6;
 import play.mvc.Controller;

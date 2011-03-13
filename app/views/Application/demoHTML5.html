@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset=utf-8 />
+    <meta name="viewport" content="width=900" />
+    <title>#{get 'title' /}</title>
+    <link rel="stylesheet" href="/public/stylesheets/html5.css" type="text/css" />
+
+
+	<!-- Internet Explorer HTML5 enabling script: -->
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<style type="text/css">
+
+			.clear {
+				zoom: 1;
+				display: block;
+			}
+		</style>
+	<![endif]-->
+
+
+</head>
+<body>
+
+<section id="page">
+    <header>
+        <h1>Demo HTML5</h1>
+        <img src="/public/images/html5.png" alt="HTML5" id="html5badge"/>
+                <nav class="clear"> <!-- The nav link semantically marks your main site navigation -->
+                    <ul>
+                        <li><a href="/">Accueil</a></li>
+                        <li><a href="#article2">Page1</a></li>
+                        <li><a href="#article3">Page2</a></li>
+                    </ul>
+                </nav>
+    </header>
+
+<!-- Article 1 start -->
+
+<div class="line"></div>  <!-- Dividing line -->
+
+<article id="article1"> <!-- The new article tag. The id is supplied so it can be scrolled into view. -->
+
+	<h2>De nouvelles balises</h2>
+
+	<div class="line"></div>
+
+	<div class="articleBody clear">
+
+		<figure> <!-- The figure tag marks data (usually an image) that is part of the article -->
+				<img src="/public/images/succes.jpg" width="265" height="208" /></a>
+		</figure>
+
+		<p>HTML5 introduit de nouvelles balises comme <code>section,header,nav</code> ou <code>article</code>
+        qui permettent de construire plus facilement la structure d'une page.</p>
+        <P>HTML5 est déjà supporté par de nombreaux navigateurs, il est possible aussi à l'aide
+        de script comme <a href="http://www.modernizr.com/">Modernizr</a> de construire des sites prêt pour HTML5, tout en continuant
+        à fonctionner avec des navigateurs plus anciens.</P>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus quam quis .... </p>
+
+	</div>
+
+</article>
+
+
+    <!-- ***************** //-->
+    <article id="article2">
+        <h2>Un bloc éditable simple</h2>
+        <div class="line"> </div>
+        <section id="editable" contenteditable="true">
+            <p>Ce bloc de text est éditable grâce à la propriété contenteditable placée sur la balise section.</p>
+            <ol>
+                <li>and now a list</li>
+                <li>with only</li>
+                <li>three items</li>
+            </ol>
+
+        </section>
+        <P>Autres démonstrations : <A href="http://html5demos.com/drag">HTML5 Demos</A></P>
+
+    </article>
+
+</section>
+<footer>Copyright(c) Nicolas Martignole - Pimp My App</footer>
+
+
+</body>
+</html>

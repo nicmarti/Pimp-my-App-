@@ -4,154 +4,32 @@
 <head>
     <title>#{get 'title' /}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    #{get 'moreStyles' /}
     <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
     #{get 'moreScripts' /}
-
-<style type="text/css">
-/*margin and padding on body element
-  can introduce errors in determining
-  element position and are not recommended;
-  we turn them off as a foundation for YUI
-  CSS treatments. */
-body {
-	margin:0;
-	padding:0;
-}
-</style>
-
-<link type="text/css" rel="stylesheet" href="/public/yuibuild/cssfonts/fonts-min.css" />
-
-
-<!--begin custom header content for this example-->
-<style type="text/css">
-/* custom styles for this example */
-.dt-example {margin:1em;}
-
-/* css to counter global site css */
-.dt-example th {text-transform:none;}
-.dt-example table {width:auto;}
-.dt-example caption {display:table-caption;}
-</style>
-<!--end custom header content for this example-->
-
-
 </head>
-<body class="yui3-skin-sam  yui-skin-sam">
+<body>
 
-<!--wrapper-->
-<div id="wrapper">
+<section id="wrapper">
+    <header>
+        <h1>Header</h1>
 
-    <!--header-->
-    <div id="header">
+    </header>
+    <article>
+        <section>
+            <p>Exemple de page HTML5</p>
+        </section>
+        <section id="editable" contenteditable="true">
+            <h2>Go ahead, edit away!</h2>
 
-        <div id="logo">
-            <a href="/">Pimp My App</a>
-
-        </div>
-        <!--logo end-->
-
-    </div>
-    <!-- header end-->
-
-    <!--menu-->
-
-    <div class="menu">
-
-        <!--nav bar-->
-
-        <div id="navbar">
-            <ul class="nav">
-
-            </ul>
-        </div>
-        <!--nav bar end-->
-        <div id="search-header">
-            <!--search form-->
-
-				    <form method="get" id="search" action="http://wp-themes.com">
-
-					<div>
-					<input type="submit" id="searchsubmit" value="" />
-               		<input type="text" value="Search" name="s" id="s"  onfocus="if(this.value=='Search'){this.value=''};" onblur="if(this.value==''){this.value='Search'};" tabindex="2"  />
-
-					</div>
-               		</form>
-
-
-        </div>
-        <!--search header end-->
-
-    </div>
-    <!--menu end-->
-
-
-    <!--content-->
-    <div id="content">
-
-        <div id="left-col">
-            <div class="post-head-single">
-
-                <h1>#{get 'title'/}</h1>
-
-            </div>
-            <!--post-heading end-->
-
-            <div class="meta-data">
-                <!--posted on in the_category | Comments-->
-            </div>
-            <!--meta data end-->
-
-            <div class="post-entry">
-                  #{doLayout /}
-                <div class="clear"></div>
-
-            </div>
-            <!--post-entry end-->
-
-        </div>
-        <!--left-col end-->
-
-        <!--right-col-->
-                <div id="right-col">
-
-                        <!--sidebar-->
-                        <div id="sidebar">
-                          #{get 'rightBar' /}
-
-                        </div><!--sb end-->
-
-                    </div> <!--right-col-->
-
-
-    </div>
-    <!--content end-->
-
-
-
-</div>
-<!--footer-->
-<div class="clear"></div>
-
-<div id="footer">
-
-    <div id="footer-desc">
-        <div id="blog-info"></div>
-    </div>
-
-    <div id="footer-widget">
-
-    </div>
-    <!--footer widget end-->
-
-    <div class="clear"></div>
-</div>
-<!--footer end-->
-<div id="footer-info">
-    <span id="copyright">Copyright(c) 2011 <a href="http://touilleur-express.fr/">Nicolas Martignole</a>  | Powered by <a href="http://www.playframework.org">Play! Framework v1.1</a></span>
-</div>
-
-
+            <p>Here's a typical paragraph element</p>
+            <ol>
+                <li>and now a list</li>
+                <li>with only</li>
+                <li>three items</li>
+            </ol>
+        </section>
+    </article>
+    <footer>Copyright(c) Nicolas Martignole - Pimp My App</footer>
+</section>
 </body>
-
 </html>

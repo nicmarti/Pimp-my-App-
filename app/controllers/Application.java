@@ -57,4 +57,8 @@ public class Application extends Controller {
     public static void create(Employee employee){
         niceForm();
     }
+
+    public static void demoHTML5(){
+        render();
+    }
 }
