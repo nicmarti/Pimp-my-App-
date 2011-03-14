@@ -37,6 +37,7 @@ figure{
   border-radius: 10px;
   border-top: 1px solid #fff;
   padding-bottom: 76px;
+	position:relative;
 }
 
 nav{
@@ -118,11 +119,6 @@ input {
 }
 /* Article styles: */
 
-#page{
-	width:960px;
-	margin:0 auto;
-	position:relative;
-}
 
 article{
     margin-top: 3em;
@@ -301,3 +297,20 @@ footer p{
     margin-bottom:5px;
 }
 
+#mainArticle {
+    width: 100%;
+    border-right-color:#222;
+    border-right-style:solid;
+    border-right-width:1px;
+}
+
+#poster{
+
+}
+
+ :invalid {
+    border-color: #e88;
+  }
+  [required] {
+    border-color: #88a;
+  }

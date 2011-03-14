@@ -1,0 +1,14 @@
+#{extends 'main.html' /}
+#{set title:'Customer'/}
+
+#{ifnot customer}
+        Erreur: pas de customer précisé.
+#{/ifnot}
+#{else}
+
+        <P><strong>Numéro client :</strong> ${customer.id}</P>
+        <P><strong>Nom :</strong> ${customer.name}</P><br/>
+
+        #{a @showInvoicesForCustomer(customer.id), class:'green button'}Voir ses factures#{/a}
+
+#{/else}

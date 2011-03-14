@@ -1,0 +1,23 @@
+#{extends 'main.html' /}
+#{set title:'Demo'/}
+
+<h3>Liste des clients</h3>
+#{list listOfCustomers, as:'cust'}
+  <li>#{a @Demo.showCustomer(cust.id)} ${cust} #{/a}</li>
+#{/list}
+
+<hr/>
+<h3>Créer un nouveau client</h3>
+
+#{if flash.success}
+<div class="greenBox">${flash.success}</div>
+#{/if}
+
+#{if flash.error}
+<div class="errorBox">${flash.error}</div>
+#{/if}
+
+#{form @persistNewCustomer()}
+ <input type="text" id="name" name="name" placeholder="Nom du client" size="30" maxlength="30"/>
+ <input type="submit" value="Enregistrer" class='button green'/>
+#{/form}

@@ -1,0 +1,91 @@
+#{extends 'main.html' /}
+#{set title:'Factures'/}
+
+#{ifnot listOfInvoices}
+        Pas de factures trouvées
+#{/ifnot}
+#{else}
+
+#{set 'moreScripts'}
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="/public/yuibuild/widget/assets/skins/sam/widget.css">
+<link rel="stylesheet" type="text/css" href="/public/yuibuild/datatable/assets/skins/sam/datatable.css">
+<link type="text/css" rel="stylesheet" href="/public/yuibuild/cssfonts/fonts-min.css" />
+
+<!-- JS -->
+<script type="text/javascript" src="/public/yuibuild/yui/yui-min.js"></script>
+<script type="text/javascript" src="/public/yuibuild/intl/intl-min.js"></script>
+<script type="text/javascript" src="/public/yuibuild/datatable/lang/datatable.js"></script>
+<script type="text/javascript" src="/public/yuibuild/oop/oop-min.js"></script>
+<script type="text/javascript" src="/public/yuibuild/event-custom/event-custom-min.js"></script>
+<script type="text/javascript" src="/public/yuibuild/pluginhost/pluginhost-min.js"></script>
+<script type="text/javascript" src="/public/yuibuild/attribute/attribute-min.js"></script>
+<script type="text/javascript" src="/public/yuibuild/base/base-min.js"></script>
+<script type="text/javascript" src="/public/yuibuild/collection/arraylist-min.js"></script>
+<script type="text/javascript" src="/public/yuibuild/recordset/recordset-base-min.js"></script>
+<script type="text/javascript" src="/public/yuibuild/dom/dom-base-min.js"></script>
+<script type="text/javascript" src="/public/yuibuild/dom/selector-native-min.js"></script>
+<script type="text/javascript" src="/public/yuibuild/dom/selector-css2-min.js"></script>
+<script type="text/javascript" src="/public/yuibuild/event/event-base-min.js"></script>
+<script type="text/javascript" src="/public/yuibuild/node/node-base-min.js"></script>
+<script type="text/javascript" src="/public/yuibuild/event/event-base-ie-min.js"></script>
+<script type="text/javascript" src="/public/yuibuild/event/event-synthetic-min.js"></script>
+<script type="text/javascript" src="/public/yuibuild/event/event-focus-min.js"></script>
+<script type="text/javascript" src="/public/yuibuild/dom/dom-style-min.js"></script>
+<script type="text/javascript" src="/public/yuibuild/dom/dom-style-ie-min.js"></script>
+<script type="text/javascript" src="/public/yuibuild/node/node-style-min.js"></script>
+<script type="text/javascript" src="/public/yuibuild/classnamemanager/classnamemanager-min.js"></script>
+<script type="text/javascript" src="/public/yuibuild/event/event-delegate-min.js"></script>
+<script type="text/javascript" src="/public/yuibuild/node/node-event-delegate-min.js"></script>
+<script type="text/javascript" src="/public/yuibuild/widget/widget-min.js"></script>
+<script type="text/javascript" src="/public/yuibuild/widget/widget-base-ie-min.js"></script>
+<script type="text/javascript" src="/public/yuibuild/dump/dump-min.js"></script>
+<script type="text/javascript" src="/public/yuibuild/substitute/substitute-min.js"></script>
+<script type="text/javascript" src="/public/yuibuild/event/event-mouseenter-min.js"></script>
+<script type="text/javascript" src="/public/yuibuild/plugin/plugin-min.js"></script>
+<script type="text/javascript" src="/public/yuibuild/datasource/datasource-local-min.js"></script>
+<script type="text/javascript" src="/public/yuibuild/stylesheet/stylesheet-min.js"></script>
+<script type="text/javascript" src="/public/yuibuild/arraysort/arraysort-min.js"></script>
+<script type="text/javascript" src="/public/yuibuild/recordset/recordset-sort-min.js"></script>
+<script type="text/javascript" src="/public/yuibuild/datatable/datatable-min.js"></script>
+#{/set}
+
+
+<div id="presorted" class="dt-example"></div>
+
+
+<script type="text/javascript">
+// Create a new YUI instance and populate it with the required modules.
+YUI({ filter: 'raw' }).use("datatable-sort", function (Y) {
+    // DataTable is available and ready for use.
+    var cols = [
+        {key:"Amount", label:"Amount", sortable:true},
+        {key:"Ref", label:"Ref",sortable:true},
+        {key:"Customer", label:"Customer", sortable:true}
+    ],
+    // Columns must match data parameter names
+    data = [
+        #{list listOfInvoices,as:'bigT'}
+            {Amount:"${bigT.amount}",
+             Ref:"${bigT.reference}",
+             Customer:"${bigT.customer}"} #{ifnot bigT_isLast},#{/ifnot}
+        #{/list}
+    ],
+
+    dt2 = new Y.DataTable.Base(
+            {columnset:cols,
+                recordset:data,
+                summary:"Liste test",
+                caption:"Liste des factures"
+            })
+            .plug(Y.Plugin.DataTableSort,
+        {lastSortedBy:{key:"Amount",dir:"asc"}})
+            .render("#presorted");
+});
+</script>
+
+#{/else}
+
+<br/>
+#{a @Demo.index()}Retour à l'index#{/a}
