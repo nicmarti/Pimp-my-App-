@@ -14,7 +14,7 @@ public class Demo extends Controller {
         render(listOfCustomers);
     }
 
-    public static void showCustomer(Long id) {
+    public static void showCustomer(Long id, String name) {
         Customer customer=Customer.findById(id);
         if(customer==null){
             flash.error("Customer non trouvé");
