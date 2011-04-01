@@ -61,4 +61,8 @@ public class Application extends Controller {
     public static void demoHTML5(){
         render();
     }
+
+    public static void minitel(){
+        render();
+    }
 }
