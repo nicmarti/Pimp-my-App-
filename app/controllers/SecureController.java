@@ -15,7 +15,6 @@ public class SecureController extends Controller {
         }
     }
 
-
     public static void login() {
         render();
     }
