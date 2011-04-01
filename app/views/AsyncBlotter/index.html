@@ -1,0 +1,69 @@
+#{extends 'main.html' /}
+#{set 'title'}
+Tableau asynchrone
+#{/set}
+
+<P>Exemple tableau avec mise à jour asynchrone</P>
+
+
+#{set 'moreScripts'}
+
+<script type="text/javascript" src="@{'/public/javascripts/jquery-1.4.4.min.js'}"></script>
+<script type="text/javascript" src="@{'/public/javascripts/jquery-ui-1.8.11.custom.min.js'}"></script>
+
+#{/set}
+
+
+<table class="simpleTable">
+    #{list items:listOfData, as:'m'}
+    <tr id="row_${m.id}">
+        <td id="id_${m.id}">${m.id}</td>
+        <td id="month_${m.id}">${m.month}</td>
+        <td id="p1_${m.id}">${m.pro_n1}</td>
+        <td id="p2_${m.id}">${m.part_var}</td>
+    </tr>
+    #{/list}
+</table>
+<div id="newMessage">
+    <input type="button" value="send" id="send"/>
+</div>
+
+<script type="text/javascript">
+
+    $('#send').click(function(e) {
+        $.get('@{index()}');
+    });
+
+//       $.ajaxSetup({
+//      "error":function(info) {
+//        //reset state here;
+//          alert("Error JSON, the message is not valid "+info.status);
+//    }});
+
+    // Retrieve new messages
+	var getMessages = function() {
+		$.ajax({
+			url: '/asyncblotter/getmessages',
+			success: function(json) {
+					display(json);
+			},
+			complete: function() {
+                getMessages();
+			},
+			dataType: 'json'
+		});
+	}
+
+     var display = function(json){
+         $.each(json, function(i, lineFromDB) {
+                     $('#month_'+lineFromDB.id).text(lineFromDB.month);
+                     $('#id_'+lineFromDB.id).text(lineFromDB.id);
+                     $('#p1_'+lineFromDB.id).text(lineFromDB.pro_n1);
+                     $('#p2_'+lineFromDB.id).text(lineFromDB.part_var);
+                     $('#row_'+lineFromDB.id).effect('highlight',{color:'#f00'},300);
+         });
+     }
+
+     getMessages();
+
+</script>

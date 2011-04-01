@@ -3,7 +3,7 @@
 
 <h3>Liste des clients</h3>
 #{list listOfCustomers, as:'cust'}
-  <li>#{a @Demo.showCustomer(cust.id)} ${cust} #{/a}</li>
+  <li>#{a @Demo.showCustomer(cust.id,cust.name)} ${cust.name} #{/a}</li>
 #{/list}
 
 <hr/>
