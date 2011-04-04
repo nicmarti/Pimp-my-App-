@@ -1,6 +1,5 @@
 package controllers;
 
-import play.*;
 import play.mvc.*;
 
 import java.util.*;
@@ -40,29 +39,30 @@ public class Application extends Controller {
         render(employee);
     }
 
-    public static void button(){
+    public static void button() {
         render();
     }
 
-    public static void listFilter(){
-        List<Employee> listOfEmployees=Employee.findAll();
+    public static void listFilter() {
+        List<Employee> listOfEmployees = Employee.findAll();
         render(listOfEmployees);
     }
 
 
-    public static void niceForm(){
+    public static void niceForm() {
         render();
     }
 
-    public static void create(Employee employee){
+    public static void create(Employee employee) {
         niceForm();
     }
 
-    public static void demoHTML5(){
+    public static void demoHTML5() {
         render();
     }
 
-    public static void minitel(){
-        render();
+    public static void minitel(String q) {
+        List<Invoice> invoices = Invoice.findByCustomerLike(q);
+        render(invoices);
     }
 }
