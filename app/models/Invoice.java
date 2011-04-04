@@ -35,4 +35,11 @@ public class Invoice extends Model {
         return listOfInvoices;
     }
 
+    public static List<Invoice> findByCustomerLike(String q) {
+        if(q==null){
+            return new ArrayList<Invoice>();
+        }
+        List<Invoice> invoices=Invoice.find("from Invoice i where i.customer.name like :p1").bind("p1","%"+q.trim()+"%").fetch();
+        return invoices;
+    }
 }

@@ -3,7 +3,7 @@ body {
     font-size: 16px;
     font-style: normal;
     font-weight: normal;
-    text-transform: normal;
+    text-transform: none;
     letter-spacing: normal;
     line-height: 1.4em;
     background: #000;
@@ -161,12 +161,16 @@ figure img {
 footer {
     margin-bottom: 30px;
     text-align: center;
-    font-size: 0.825em;
 }
 
 footer p {
     margin-bottom: -2.5em;
     position: relative;
+}
+
+footer a, footer a:hover {
+    text-decoration: none;
+    color:#333;
 }
 
 .loading {
@@ -322,7 +326,6 @@ footer p {
     border-color: #ccc;
     border-width: 1px;
     padding: 10px 10px 10px 10px;
-
     -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
     -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 
@@ -347,9 +350,35 @@ footer p {
 
 a {
     color: #914901;
-    text-shadow: 0 1px 1px white;
 }
 a:hover {
     color: #ff6633;
-    text-shadow: 0 1px 1px white;
+}
+
+.bigTable {
+    border-style: solid;
+    border-color: #ccc;
+    border-width: 1px;
+    padding: 10px 10px 10px 10px;
+    -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    font-size:11px;
+    margin-top:8px;
+}
+
+.bigTable thead {
+    font-family: 'Arial';
+    font-variant: small-caps;
+}
+
+.bigTable td {
+    border-style: solid;
+    border-color: #ccc;
+    border-width: 1px;
+    padding: 3px 3px;
+}
+
+.bigTable tfoot {
+    font-size: 10px;
+    color: #222;
 }

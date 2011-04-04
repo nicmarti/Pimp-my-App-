@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Mon application</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="/public/stylesheets/main.css">
+    <link rel="shortcut icon" type="image/png" href="/public/images/favicon.png">
+
+</head>
+<body>
+<style>
+    BODY {
+        background-color: grey;
+        font-family: "Courier New", Courier, serif;
+        font-weight: 900;
+    }
+
+    .colorTitre {
+        color: #015CD5;
+    }
+
+    .colorTexte {
+        color: #63B4FF;
+    }
+
+    a.colorTitre {
+        color: #015CD5;
+        text-decoration: none;
+    }
+
+    a.colorTitre:hover {
+        color: black;
+        text-decoration: none;
+        background-color: #1795FF;
+    }
+
+    .buttonEnvoi {
+        padding-left: 5px;
+        font-size: 1.9em;
+        border: 1px solid #0033ff;
+        background-color: #0033ff;
+        color: #ffff33;;
+        font-weight: bold;
+        cursor: pointer;
+        width: auto;
+        overflow: visible;
+    }
+
+
+
+    .input {
+        font-size: 2em;
+        font-weight: bold;
+        background-color: black;
+        border: 0;
+             color: #ccffcc;
+        font-family: Courier;
+    }
+
+
+    .bgclair1 {
+        background-color: #1795FF;
+        color: #0043AB;
+    }
+
+    .bgclair3 {
+        background: url(/public/images/minitel/bg.jpg) top left;
+        color: #00347F;
+    }
+
+    .bgclair2 {
+        background-color: #1795FF;
+        font-weight: bold;
+        color: #00347F;
+    }
+
+    a.sommaire {
+        font-weight: bold;
+        text-decoration: none;
+        color: #00347F;
+    }
+
+    a.sommaire:hover {
+        background-color: #1795FF;
+    }
+
+    .titre {
+        padding-left:16px;
+        float: left;
+        font-size: 20px;
+        line-height: 55px;
+        color: #fff;
+        width:900px;
+        background: url(/public/images/minitel/bgtitre.jpg) top left repeat-x;
+        background-color: black;
+        letter-spacing: 4px;
+
+    }
+
+    .titre2 {
+         float: left;
+        font-size: 14px;
+        line-height: 55px;
+        color: #fff;
+        margin-left:15px;
+    }
+    .darkTable{
+        background-color: #0a1f00;
+        padding-left:5px;
+        padding-right:5px;
+    }
+    .preCoffe{
+        clear:left;
+        font-size: 12px;
+        line-height:2em;
+    }
+    .code{
+        font-size:16px;
+        color: #ccffcc;
+    }
+    .tdCl{
+          font-size:16px;
+        color: #ccffcc;
+        background-color: #00330b;
+    }
+    .tdCl2{
+        font-size:12px;
+        color: #ccffcc;
+        background-color: #00330f;
+    }
+</style>
+
+<div id="main">
+    <table class="darkTable">
+        <tr>
+            <td align=right><img src=/public/images/minitel/point.gif border=0></td>
+        </tr>
+        <tr>
+            <td class=titre nowrap="nowrap" valign="top" align="left">
+                   <div class="titre">Ma bonne vieille appli de gestion v9.0.082</div>
+                <div class="titre2">Etat de gestion des bilans</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="code">(N)om du client : </span>
+                #{form @minitel()}
+                <input type="text" name="q" size="20" maxlength="255" value="" id="sbi"
+                       class="input colorTitre"></input>
+                <br/>
+                <span class="code">(R)éférence facture : </span>
+                <input type="text" name="q2" size="10" maxlength="255" value="" id="sbi2"
+                                       class="input colorTitre"></input>
+
+
+                &nbsp;&nbsp;<input type="submit" name="sa" value="ENVOI (F8)" id="sbb" class="buttonEnvoi"></input>
+                #{/form}
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" class="tdCl">Liste des nomenclatures produits</td>
+        </tr>
+        <tr>
+
+            <td class=bgclair3 style=padding:5px>
+                <div style="float:left;padding-left:10px;" class=big>
+                    <font class=bgclair2>&nbsp;&nbsp;1</font> Lave-linge<br>
+                    <font class=bgclair2>&nbsp;&nbsp;2</font> Cuisinière<br>
+                    <font class=bgclair2>&nbsp;&nbsp;3</font> Aspirateur<br>
+                    <font class=bgclair2>&nbsp;&nbsp;4</font> Télévision<br>
+                    <font class=bgclair2>&nbsp;&nbsp;5</font> Hifi/Sons<br>
+                    <font class=bgclair2>&nbsp;&nbsp;6</font> Blanc autre<br>
+                    <font class=bgclair2>&nbsp;&nbsp;7</font> Produits médias<br>
+                    <font class=bgclair2>&nbsp;&nbsp;8</font> Sèche-linge<br>
+                    <b style=margin-left:50px>N° Puis Envoi</b>
+                </div>
+                <div style="float:left;padding-left:30px;" class=big>
+                    <font class=bgclair2>&nbsp;&nbsp;9</font> Ordinateur<br>
+                    <font class=bgclair2>&nbsp;10</font> Sèche-Cheveux pour chauve<br>
+                    <font class=bgclair2>&nbsp;11</font> Combiné cassette<br>
+                    <font class=bgclair2>&nbsp;12</font> Mixeur, robot à bobonne<br>
+                    <font class=bgclair2>&nbsp;13</font> Cafetières<br>
+                    <font class=bgclair2>&nbsp;14</font> Radio<br>
+                    <font class=bgclair2>&nbsp;15</font> Autres divers<br>
+                    <font class=bgclair2>&nbsp;16</font> Appel vendeur<br>
+                </div>
+                  <div style="float:left;padding-left:30px;" class=big>
+                      #{list items:invoices, as:'m'}
+                <font class=bgclair2>${m_index}</font> ${m.customer?.name} ${m.amount}<br/>
+                #{/list}
+
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div style=float:left class="colorTitre big">
+                    <a class=colorTitre href="#"><b>[ Etablir la facture ]</b></a>
+                </div>
+                <div style=float:right class="colorTitre big">
+                    <a class=colorTitre href="http://www.express-board.fr"><b>Accueil</b></a>
+                    &nbsp;
+                    <a class=colorTitre href="http://www.express-board.fr"><b>Aide</b></a>
+                    &nbsp;
+                    <a class=colorTitre
+                       href="http://www.express-board.fr"><b>Déconnexion</b></a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="tdCl">Connexion avec le serveur active</td>
+        </tr>
+        <tr>
+            <td class="tdCl">--------------------------------------------------------------------------------------------</td>
+         </tr>
+
+        <tr>
+             <td class="tdCl2">
+                #{list items:invoices, as:'m'}
+                ${m.customer?.name} ${m.amount}<br/>
+                #{/list}
+            </td>
+        </tr>
+    </table>
+
+</div>
+</body>
+</html>
