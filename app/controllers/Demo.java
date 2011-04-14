@@ -71,4 +71,9 @@ public class Demo extends Controller {
         flash.success("Factures de démonstration créées");
         index();
     }
+
+
+    public static void indexDemo(String firstName){
+        render(firstName);
+    }
 }

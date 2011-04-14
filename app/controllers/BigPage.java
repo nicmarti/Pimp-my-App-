@@ -1,7 +1,7 @@
 package controllers;
 
 import models.BigTableR;
-import models.BigTable_R6;
+import models.BigTable;
 import play.mvc.Controller;
 import play.templates.JavaExtensions;
 
@@ -55,9 +55,9 @@ public class BigPage extends Controller {
     public static void search(String q) {
         List<String> results;
         if (q == null) {
-            results = BigTable_R6.find("select distinct localisation from BigTable_R6 order by localisation").fetch(100);
+            results = BigTable.find("select distinct localisation from BigTable order by localisation").fetch(100);
         } else {
-            results = BigTable_R6.find("select distinct localisation from BigTable_R6 where localisation like :ploc order by localisation")
+            results = BigTable.find("select distinct localisation from BigTable where localisation like :ploc order by localisation")
                     .bind("ploc", JavaExtensions.camelCase(q.trim())+"%")
                     .fetch();
         }

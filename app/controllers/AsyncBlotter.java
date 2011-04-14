@@ -1,9 +1,9 @@
 package controllers;
 
-import models.BigTable_R6;
-import org.joda.time.DateMidnight;
+import models.BigTable;
 import play.mvc.Controller;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -13,26 +13,30 @@ import java.util.List;
  * @since 16/03/11 17:35
  */
 public class AsyncBlotter extends Controller {
+
+
+    /**
+     * Selectionne 10 entrées où id < 15, puis met à jour
+     */
     public static void index(){
-        List<BigTable_R6> listOfData = BigTable_R6.find("id < ?",15L).fetch(10);
-         for(BigTable_R6 m:listOfData){
-            m.part_var=Math.random()*10;
-            m.pro_n1=Math.random()*10;
+        List<BigTable> listOfData = BigTable.find("id < ?", 15L).fetch(10);
+         for(BigTable m:listOfData){
+            m.variable01 =Math.random()*10;
+            m.variable02 =Math.random()*10;
+            m.date=new Date();
             m.save();
         }
         render(listOfData);
     }
 
     public static void getMessages(){
-       List<BigTable_R6> messages = BigTable_R6.find("from BigTable_R6 r where r.id<15 and (r.pro_n1<5 or r.part_var > 5)").fetch();
+       List<BigTable> messages = BigTable.find("from BigTable r where r.id<15 and r.date > :lastVisit ")
+               .bind("lastVisit",request.date)
+               .fetch();
 
+        // Play long-polling, the current HTTP Request is suspended
         if (messages.isEmpty()) {
-            suspend("5s");
-        }
-        for(BigTable_R6 m:messages){
-            m.part_var=Math.random()*10;
-            m.pro_n1=Math.random()*10;
-            m.save();
+            suspend("1s");
         }
         renderJSON(messages);
     }

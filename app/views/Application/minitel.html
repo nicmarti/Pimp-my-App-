@@ -158,11 +158,13 @@
                 #{/form}
             </td>
         </tr>
+
+        #{if !invoices}
+
         <tr>
             <td colspan="1" class="tdCl">Liste des nomenclatures produits</td>
         </tr>
         <tr>
-
             <td class=bgclair3 style=padding:5px>
                 <div style="float:left;padding-left:10px;" class=big>
                     <font class=bgclair2>&nbsp;&nbsp;1</font> Lave-linge<br>
@@ -193,6 +195,8 @@
                 </div>
             </td>
         </tr>
+
+
         <tr>
             <td>
                 <div style=float:left class="colorTitre big">
@@ -211,17 +215,24 @@
         <tr>
             <td class="tdCl">Connexion avec le serveur active</td>
         </tr>
-        <tr>
-            <td class="tdCl">--------------------------------------------------------------------------------------------</td>
-         </tr>
+        #{/if}
+        #{else}
+          <tr>
+            <td colspan="tdCl" class="tdCl">Recherche client</td>
+        </tr>
+        #{/else}
 
         <tr>
-             <td class="tdCl2">
-                #{list items:invoices, as:'m'}
-                ${m.customer?.name} ${m.amount}<br/>
-                #{/list}
-            </td>
+            <td>Nom client === Montant facture</td>
         </tr>
+
+        #{list items:invoices, as:'m'}
+        <tr>
+             <td class="tdCl">| ${m.customer?.name} | ${m.amount?.round(2)} EUR | </td>
+
+        </tr>
+        #{/list}
+
     </table>
 
 </div>

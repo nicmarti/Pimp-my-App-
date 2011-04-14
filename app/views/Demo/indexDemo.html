@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="/public/stylesheets/maindemo.css" type="text/css"/>
+
+#{set title:'Home' /}
+
+<h1>Hello Bordeaux JUG</h1>
+
+#{form @Demo.indexDemo()}
+<input type="text" name="firstName" placeholder="Enter your firstName" size="30" value="${firstName}"/>
+<input type="submit" id="authenticate" value="Envoyer" class="button green"/>
+
+#{/form}
+
+#{if firstName}
+<h2>${firstName}</h2>
+#{/if}
+
+
+
