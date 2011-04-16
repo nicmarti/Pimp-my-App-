@@ -73,7 +73,7 @@ public class Demo extends Controller {
     }
 
 
-    public static void indexDemo(String firstName){
-        render(firstName);
+    public static void indexDemo(){
+       render();
     }
 }

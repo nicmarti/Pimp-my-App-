@@ -171,14 +171,9 @@
       </item>
     </group>
   </component>
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state />
-    </entry>
-  </component>
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../demo2/demo/demo.iml" filepath="$PROJECT_DIR$/../demo2/demo/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../demo3/demo3.iml" filepath="$PROJECT_DIR$/../demo3/demo3.iml" />
       <module fileurl="file://$PROJECT_DIR$/pimpmyapp.iml" filepath="$PROJECT_DIR$/pimpmyapp.iml" />
     </modules>
   </component>

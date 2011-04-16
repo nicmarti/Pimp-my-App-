@@ -41,4 +41,21 @@ public class AsyncBlotter extends Controller {
         renderJSON(messages);
     }
 
+    public static void updateLine(Long id, Double variable01, Double variable02){
+        BigTable entry=BigTable.findById(id);
+        if(entry==null){
+            flash.error("Not found");
+            index();
+        }
+        entry.variable01=variable01;
+        entry.variable02=variable02;
+        entry.date=new Date();
+        entry.save();
+
+        List<BigTable> listOfData = BigTable.find("id < ?", 15L).fetch(10);
+        renderTemplate("AsyncBlotter/index.html",listOfData);
+    }
+
+    // Pour la demo update agg_r6 set part_var=100.0,pro_n1=210.21,date=now() where id < 10;
+
 }

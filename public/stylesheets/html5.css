@@ -382,3 +382,11 @@ a:hover {
     font-size: 10px;
     color: #222;
 }
+
+#asyncBlotter{
+    margin-top:12px;
+}
+
+#asyncBlotter input {
+    font-size:11px;
+}

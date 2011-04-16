@@ -4,15 +4,8 @@
 
 <h1>Hello Bordeaux JUG</h1>
 
-#{form @Demo.indexDemo()}
-<input type="text" name="firstName" placeholder="Enter your firstName" size="30" value="${firstName}"/>
-<input type="submit" id="authenticate" value="Envoyer" class="button green"/>
+#{list listOfCustomers, as:'customer'}
 
-#{/form}
+#{a @Demo.showCustomer(customer.id , customer.name)} ${customer.name} #{/a} <br/>
 
-#{if firstName}
-<h2>${firstName}</h2>
-#{/if}
-
-
-
+#{/list}

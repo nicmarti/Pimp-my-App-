@@ -2,22 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3db96c7-c34d-4dbb-97f2-85ece9fda769" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/BigTable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/Demo/indexDemo.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/BigTable_R6.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/forDemo/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NewApp.ipr" afterPath="$PROJECT_DIR$/NewApp.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NewApp.iws" afterPath="$PROJECT_DIR$/NewApp.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/AsyncBlotter.java" afterPath="$PROJECT_DIR$/app/controllers/AsyncBlotter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/BigPage.java" afterPath="$PROJECT_DIR$/app/controllers/BigPage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Demo.java" afterPath="$PROJECT_DIR$/app/controllers/Demo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Application/index.html" afterPath="$PROJECT_DIR$/app/views/Application/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Application/minitel.html" afterPath="$PROJECT_DIR$/app/views/Application/minitel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Invoice.java" afterPath="$PROJECT_DIR$/app/models/Invoice.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/AsyncBlotter/index.html" afterPath="$PROJECT_DIR$/app/views/AsyncBlotter/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/BigPage/autocomplete.html" afterPath="$PROJECT_DIR$/app/views/BigPage/autocomplete.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/SecureController/login.html" afterPath="$PROJECT_DIR$/app/views/SecureController/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main.html" afterPath="$PROJECT_DIR$/app/views/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/application.conf" afterPath="$PROJECT_DIR$/conf/application.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/Application.test.html" afterPath="$PROJECT_DIR$/test/Application.test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Demo/indexDemo.html" afterPath="$PROJECT_DIR$/app/views/Demo/indexDemo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/html5.css" afterPath="$PROJECT_DIR$/public/stylesheets/html5.css" />
     </list>
     <ignored path="NewApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,66 +70,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/main.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="43" selection-start="703" selection-end="703" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BigTable.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/BigTable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="0" selection-start="525" selection-end="525" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.conf" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/conf/application.conf">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="31" selection-start="194" selection-end="194" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AsyncBlotter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/AsyncBlotter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="80" selection-start="299" selection-end="299" vertical-scroll-proportion="0.0">
+            <state line="42" column="0" selection-start="1097" selection-end="1097" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/Application/index.html">
+      <file leaf-file-name="Demo.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/Demo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="42" selection-start="1045" selection-end="1045" vertical-scroll-proportion="0.0">
+            <state line="77" column="15" selection-start="2014" selection-end="2014" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="minitel.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/Application/minitel.html">
+      <file leaf-file-name="Invoice.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/Invoice.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="230" column="82" selection-start="6860" selection-end="6860" vertical-scroll-proportion="0.0">
+            <state line="37" column="35" selection-start="1050" selection-end="1050" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/AsyncBlotter/index.html">
+      <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/forDemo/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="49" selection-start="785" selection-end="785" vertical-scroll-proportion="0.058346838">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -156,28 +120,44 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../demo2/demo/app/views/Application/index.html" />
-        <option value="$PROJECT_DIR$/../demo2/demo/app/controllers/Application.java" />
-        <option value="$PROJECT_DIR$/app/models/Customer.java" />
-        <option value="$PROJECT_DIR$/app/views/Demo/demoMixIt.html" />
-        <option value="$PROJECT_DIR$/app/views/Application/employees.html" />
-        <option value="$PROJECT_DIR$/app/controllers/Demo.java" />
-        <option value="$PROJECT_DIR$/app/views/Demo/indexDemo.html" />
-        <option value="$PROJECT_DIR$/app/views/SecureController/login.html" />
-        <option value="$PROJECT_DIR$/app/views/main.html" />
-        <option value="$PROJECT_DIR$/app/views/BigPage/autocomplete.html" />
-        <option value="$PROJECT_DIR$/app/controllers/BigPage.java" />
         <option value="$PROJECT_DIR$/app/views/Application/index.html" />
         <option value="$PROJECT_DIR$/app/views/Application/minitel.html" />
         <option value="$PROJECT_DIR$/conf/application.conf" />
         <option value="$PROJECT_DIR$/app/models/BigTable.java" />
+        <option value="$PROJECT_DIR$/public/stylesheets/html5.css" />
         <option value="$PROJECT_DIR$/app/views/AsyncBlotter/index.html" />
+        <option value="$PROJECT_DIR$/app/controllers/AsyncBlotter.java" />
+        <option value="$PROJECT_DIR$/../demo3/public/stylesheets/main.css" />
+        <option value="$PROJECT_DIR$/../demo3/app/views/Application/index.html" />
+        <option value="$PROJECT_DIR$/../demo3/app/controllers/Application.java" />
+        <option value="$PROJECT_DIR$/app/views/Demo/indexDemo.html" />
+        <option value="$PROJECT_DIR$/conf/routes" />
+        <option value="$PROJECT_DIR$/app/views/Application/employees.html" />
+        <option value="$PROJECT_DIR$/app/controllers/BigPage.java" />
+        <option value="$PROJECT_DIR$/app/controllers/Demo.java" />
+        <option value="$PROJECT_DIR$/app/models/Invoice.java" />
       </list>
     </option>
   </component>
   <component name="ModuleEditorState">
     <option name="LAST_EDITED_MODULE_NAME" />
     <option name="LAST_EDITED_TAB_NAME" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id>Inspections</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Abstraction issues</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -205,6 +185,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Favorites" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -273,139 +255,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SecureController" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BigPage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AsyncBlotter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -438,7 +294,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="options.lastSelected" value="preferences.sourceCode.General" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="DefaultHtmlFileTemplate" value="Html" />
     <property name="MemberChooser.copyJavadoc" value="false" />
@@ -446,6 +302,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/forDemo" />
       <recent name="$PROJECT_DIR$/app/views/DemoJug" />
     </key>
   </component>
@@ -588,21 +445,21 @@
     <frame x="0" y="22" width="1440" height="787" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46554935" sideWeight="0.0" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4647676" sideWeight="0.0" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997844" sideWeight="0.32533732" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27534148" sideWeight="0.53445065" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27534148" sideWeight="0.53523237" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39963168" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296501" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3258786" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32545453" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24946082" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -623,7 +480,7 @@
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="pour la demo&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Avant demo au Bordeaux JUG le 14 avril 2011" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -656,6 +513,7 @@
     <MESSAGE value="Ajout d'une action pour rechercher les invoices par nom" />
     <MESSAGE value="Avant mix-it" />
     <MESSAGE value="pour la demo&#10;" />
+    <MESSAGE value="Avant demo au Bordeaux JUG le 14 avril 2011" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -665,96 +523,90 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/Application/employees.html">
+    <entry file="file://$PROJECT_DIR$/../demo3/app/controllers/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="103" selection-start="1252" selection-end="1252" vertical-scroll-proportion="-3.8095238" />
+        <state line="11" column="29" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/Demo/index.html">
+    <entry file="file://$PROJECT_DIR$/app/models/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="16" selection-start="574" selection-end="574" vertical-scroll-proportion="-12.571428" />
+        <state line="45" column="0" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/conf/routes">
+    <entry file="jar://$PROJECT_DIR$/../../play-1.1/framework/play.jar!/play/db/jpa/GenericModel.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="32" column="68" selection-start="1716" selection-end="1716" vertical-scroll-proportion="0.3498965" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Demo.java">
+    <entry file="file://$PROJECT_DIR$/app/models/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="5" selection-start="2040" selection-end="2040" vertical-scroll-proportion="0.0" />
+        <state line="10" column="22" selection-start="194" selection-end="198" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/Demo/indexDemo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="77" selection-start="400" selection-end="400" vertical-scroll-proportion="-9.714286" />
+        <state line="8" column="32" selection-start="206" selection-end="208" vertical-scroll-proportion="-7.076923" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/SecureController/login.html">
+    <entry file="file://$PROJECT_DIR$/conf/routes">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="25" selection-start="951" selection-end="951" vertical-scroll-proportion="-16.571428" />
+        <state line="4" column="25" selection-start="110" selection-end="116" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../../play-1.1/framework/lib/hibernate-jpa-2.0-api-1.0.0.Final.jar!/javax/persistence/TemporalType.class">
+    <entry file="file://$PROJECT_DIR$/app/views/Demo/showCustomer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="18" selection-start="160" selection-end="160" vertical-scroll-proportion="0.10118044" />
+        <state line="13" column="40" selection-start="357" selection-end="357" vertical-scroll-proportion="-11.5" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main.html">
+    <entry file="file://$PROJECT_DIR$/app/views/Application/niceForm.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="43" selection-start="703" selection-end="703" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="23" column="35" selection-start="749" selection-end="754" vertical-scroll-proportion="-12.384615" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/Application/employees.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="0" selection-start="2413" selection-end="2413" vertical-scroll-proportion="-13.115385" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/BigPage/yahooTableSorted.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="62" selection-start="4058" selection-end="4062" vertical-scroll-proportion="5.3076925" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/BigPage/autocomplete.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="811" selection-end="811" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="15" column="0" selection-start="436" selection-end="436" vertical-scroll-proportion="-1.7692307" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/BigPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="79" selection-start="1686" selection-end="1686" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conf/application.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="31" selection-start="194" selection-end="194" vertical-scroll-proportion="0.0" />
+        <state line="56" column="57" selection-start="1473" selection-end="1473" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/AsyncBlotter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="80" selection-start="299" selection-end="299" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/Application/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="42" selection-start="1045" selection-end="1045" vertical-scroll-proportion="0.0">
+        <state line="42" column="0" selection-start="1097" selection-end="1097" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/Application/minitel.html">
+    <entry file="file://$PROJECT_DIR$/app/controllers/Demo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="230" column="82" selection-start="6860" selection-end="6860" vertical-scroll-proportion="0.0">
+        <state line="77" column="15" selection-start="2014" selection-end="2014" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/BigTable.java">
+    <entry file="file://$PROJECT_DIR$/app/models/Invoice.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="525" selection-end="525" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="37" column="35" selection-start="1050" selection-end="1050" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/AsyncBlotter/index.html">
+    <entry file="file://$PROJECT_DIR$/forDemo/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="49" selection-start="785" selection-end="785" vertical-scroll-proportion="0.058346838">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -762,74 +614,14 @@
   </component>
   <component name="masterDetails">
     <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
       <state key="Copyright.UI">
         <settings>
           <splitter-proportions />
         </settings>
       </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Bean Validation</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
           <last-edited>grails-1.1.2</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.5</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>demo</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.5" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>

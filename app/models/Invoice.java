@@ -22,9 +22,6 @@ public class Invoice extends Model {
 
     // Cette méthode n'est pas nécessaire, je la créé pour la démo seulement
     // il est possible de faire la requete dans le controller directement
-
-
-
     public static List<Invoice> findByCustomer(Long id) {
         Customer customer=Customer.findById(id);
         if(customer==null){

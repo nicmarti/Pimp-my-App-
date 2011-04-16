@@ -3,8 +3,7 @@
 Tableau asynchrone
 #{/set}
 
-<P>Exemple tableau avec mise à jour asynchrone</P>
-
+<P>Exemple avec Play! 1.1, utilisation du long-polling<br/> et de la partie NIO asynchrone de Play!</P>
 
 #{set 'moreScripts'}
 
@@ -34,6 +33,16 @@ Tableau asynchrone
 </table>
 <div id="newMessage">
     <input type="button" value="Shuffle values" id="send" class="button red"/>
+</div>
+
+<div id="asyncBlotter">
+<P>Mettre à jour une ligne :</P>
+#{form @AsyncBlotter.updateLine()}
+<input type="text" name="id" value="1" size="4"/>
+<input type="text" name="variable01" value="3.0" size="5"/>
+<input type="text" name="variable02" value="5.2" size="5"/>
+<input type="submit" class="button green" value="Update"/>
+#{/form}
 </div>
 
 <script type="text/javascript">
