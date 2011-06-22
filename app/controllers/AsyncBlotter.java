@@ -37,18 +37,12 @@ public class AsyncBlotter extends Controller {
      * Selectionne 10 entrées où id < 15, puis met à jour
      */
     public static void index(){
-        List<BigTable> listOfData = BigTable.find("id < ?", 15L).fetch(10);
-         for(BigTable m:listOfData){
-            m.variable01 =Math.random()*10;
-            m.variable02 =Math.random()*10;
-            m.lastUpdated=new Date();
-            m.save();
-        }
+        List<BigTable> listOfData = BigTable.find("order by id").fetch(10);
         render(listOfData);
     }
 
     public static void getMessages(){
-       List<BigTable> messages = BigTable.find("from BigTable r where r.id<15 and r.date > :lastVisit ")
+       List<BigTable> messages = BigTable.find("from BigTable r where r.lastUpdated > :lastVisit order by id")
                .bind("lastVisit",request.date)
                .fetch();
 
@@ -67,13 +61,23 @@ public class AsyncBlotter extends Controller {
         }
         entry.variable01=variable01;
         entry.variable02=variable02;
-        entry.lastUpdated=new Date();
+        entry.lastUpdated=request.date;
         entry.save();
 
-        List<BigTable> listOfData = BigTable.find("id < ?", 15L).fetch(10);
+        List<BigTable> listOfData = BigTable.find("order by id").fetch(10);
         renderTemplate("AsyncBlotter/index.html",listOfData);
     }
 
     // Pour la demo update agg_r6 set part_var=100.0,pro_n1=210.21,date=now() where id < 10;
 
+    public static void shuffle(){
+        List<BigTable> listOfData = BigTable.find("order by id").fetch(10);
+        for(BigTable bt:listOfData){
+            bt.variable01=Math.random()*10;
+            bt.variable02=Math.random()*10;
+            bt.lastUpdated=new Date();
+            bt.save();
+        }
+        index();
+    }
 }

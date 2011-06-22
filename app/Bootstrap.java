@@ -19,6 +19,7 @@
 import models.*;
 import org.joda.time.DateMidnight;
 import org.joda.time.DateTime;
+import org.joda.time.MutableDateTime;
 import play.Logger;
 import play.Play;
 import play.jobs.Job;
@@ -39,11 +40,11 @@ public class Bootstrap extends Job {
     public void doJob() {
         if (Play.mode == Play.Mode.DEV) {
 
-            // BigTable.deleteAll();
+             //BigTable.deleteAll();
             // BigTableR.deleteAll();
             //
-            Customer.deleteAll();
             Invoice.deleteAll();
+            Customer.deleteAll();
             Employee.deleteAll();
             User.deleteAll();
 
@@ -57,7 +58,10 @@ public class Bootstrap extends Job {
                 Logger.info("Creating " + maxEntries + " entries for testing");
 
                 BigTable bigTable;
-                DateMidnight aDate = new DateMidnight().minusYears(2);
+                // Create an enty in the past, so that AsyncBlotter can fetch the updated rows
+                MutableDateTime aDate = new MutableDateTime();
+                aDate.setMonthOfYear(1);
+                aDate.setYear(2010);
 
                 for (int i = 0; i < maxEntries; i++) {
                     bigTable = new BigTable();
@@ -65,8 +69,8 @@ public class Bootstrap extends Job {
                     bigTable.variable02 = Math.random() * 100;
                     bigTable.lastUpdated = aDate.toDate();
                     if (i % 100 == 0) {
-                        aDate = aDate.plusDays(1);
-                        Logger.info("Created " + i + " entries");
+                        aDate.addDays(1);
+                        Logger.info("Created " + i + " entries" + aDate.toString());
                     }
                     bigTable.save();
                 }

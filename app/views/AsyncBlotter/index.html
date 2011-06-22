@@ -1,6 +1,6 @@
 #{extends 'main.html' /}
 #{set 'title'}
-Tableau asynchrone
+Async blotter
 #{/set}
 
 <!--
@@ -21,7 +21,16 @@ Tableau asynchrone
   ~ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   -->
 
-<P>Exemple avec Play! 1.1, utilisation du long-polling<br/> et de la partie NIO asynchrone de Play!</P>
+<P>This is a simple application that demonstrates the long-polling feature of Play! v1.1.1</P>
+<p>How to demonstrate ? </p>
+<ul>
+    <li>Open a 2nd web browser window</li>
+    <li>Edit a line, select the id, set a value and click on Update</li>
+    <li>The value on the active web browser is refreshed</li>
+    <li>The new value is updated on the 2nd browser</li>
+</ul>
+
+<em>Know issue: the date format with JSON is not handled properly.</em>
 
 #{set 'moreScripts'}
 
@@ -45,21 +54,22 @@ Tableau asynchrone
         <td id="id_${m.id}">${m.id}</td>
         <td id="p1_${m.id}">${m.variable01.round(3)}</td>
         <td id="p2_${m.id}">${m.variable02.round(3)}</td>
-        <td id="date_${m.id}">${m.lastUpdated.format('DD MMM yyyy HH:mm:ss')}</td>
+        <td id="date_${m.id}">${m.lastUpdated}</td>
     </tr>
     #{/list}
 </table>
+<br/>
 <div id="newMessage">
-    <input type="button" value="Shuffle values" id="send" class="button red"/>
+    <a href="@{AsyncBlotter.shuffle()}" title="Shuffle values" class="button red">Shuffle values</a>
 </div>
 
 <div id="asyncBlotter">
-<P>Mettre à jour une ligne :</P>
+<P>Update a specific line :</P>
 #{form @AsyncBlotter.updateLine()}
-<input type="text" name="id" value="1" size="4"/>
-<input type="text" name="variable01" value="3.0" size="5"/>
-<input type="text" name="variable02" value="5.2" size="5"/>
-<input type="submit" class="button green" value="Update"/>
+ID: <input type="text" name="id" value="1" size="4"/>
+VAR1: <input type="text" name="variable01" value="3.0" size="5"/>
+VAR2: <input type="text" name="variable02" value="5.2" size="5"/>
+<input type="submit" class="button green" value="Update this line"/>
 #{/form}
 </div>
 
@@ -94,7 +104,7 @@ Tableau asynchrone
                      $('#id_'+lineFromDB.id).text(lineFromDB.id);
                      $('#p1_'+lineFromDB.id).text(lineFromDB.variable01);
                      $('#p2_'+lineFromDB.id).text(lineFromDB.variable02);
-                     $('#date_'+lineFromDB.id).text(lineFromDB.date);
+                     $('#date_'+lineFromDB.id).text(lineFromDB.lastUpdated);
                      $('#row_'+lineFromDB.id).effect('highlight',{color:'#f00'},200);
          });
      }
