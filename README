@@ -1,5 +1,6 @@
 ----------------------------------------------------------------------
-Pimp My App! with Play! Framework
+Pimp My App! with Play! Framework v1.1.1
+June 2011
 by Nicolas Martignole
 ----------------------------------------------------------------------
 
@@ -7,6 +8,12 @@ This is the code source of a set of presentation I did in 2010
 and 2011 in France, Luxembourg and Switzerland to present Play! Framework.
 The code source shows various use case with HTML5, CSS3 and of
 course Play! Framework features.
+
+---------------------------------------
+It requires Play! Framework v1.1.1
+---------------------------------------
+Please note that it was not tested with v1.2.x or older
+version of Play! Framework
 
 The code source licence is GPLv2.
 
