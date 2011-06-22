@@ -1,6 +1,11 @@
+*.bak
+*.old
 tmp
 logs
 out
-*.iws
+NewpApp.iws
+NewApp.ipr
 *.ipr
-
+*.ips
+test-result
+db
