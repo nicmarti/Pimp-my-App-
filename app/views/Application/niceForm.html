@@ -3,28 +3,61 @@
 
 
 #{set 'moreScripts'}
+<!--
+  ~ Copyright (C) 2011 Nicolas Martignole
+  ~
+  ~ This program is free software; you can redistribute it and/or
+  ~ modify it under the terms of the GNU General Public License
+  ~ as published by the Free Software Foundation; either version 2
+  ~ of the License, or (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program; if not, write to the Free Software
+  ~ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+  -->
+
 <script src="@{'/public/javascripts/jquery-1.4.4.min.js'}" type="text/javascript" charset="utf-8"></script>
 #{/set}
 
+<P>This page demonstrates the new HTML5 form features such as <code>&lt;input type=email...&gt;</code></P>
 #{form @Application.create(), class:'niceForm'}
-<fieldset>
-    <legend>Créer un nouvel employé</legend>
 
-    <label title="lTest" for="pr1">Prénom :
-        <input id="pr1" type="text" name="firstName" size="40" placeholder="Tapez ici le prénom" tabindex="1"
+#{ifErrors}
+   <div class="error">
+   <h1>Unable to store the new Employee</h1>
+   #{errors}
+       <li>${error}</li>
+   #{/errors}
+    </div>
+#{/ifErrors}
+#{if flash.success}
+        <div class="success">
+        ${flash.success}
+        </div>
+#{/if}
+<fieldset>
+    <legend>Create a new employee:</legend>
+
+    <label title="lTest" for="pr1">Firstname :
+        <input id="pr1" type="text" name="employee.firstName" size="40" placeholder="The employee firstname" tabindex="1"
                autofocus required/>
     </label>
 
 
-    <label title="lTest2" for="pr2">Nom :
-        <input id="pr2" type="text" name="lastName" size="40" placeholder="Tapez ici le nom" tabindex="2" required/>
+    <label title="lTest2" for="pr2">Lastname :
+        <input id="pr2" type="text" name="employee.lastName" size="40" placeholder="The employee lastname" tabindex="2" required/>
     </label>
 
     <label title="lMail" for="pr3">Email :
-        <input id="pr3" type="email" name="email" size="40" placeholder="Par exemple : nom@domain.com" tabindex="3"/>
+        <input id="pr3" type="email" name="employee.email" size="40" placeholder="E.g yourname@domain.com" tabindex="3"/>
     </label>
 
-    <label title="spinBox">Combien avez-vous d'ordinateur ?
+    <label title="spinBox">How many computers he has ?
         <input type="number" name="computers"
                min="0"
                max="10"
@@ -33,7 +66,7 @@
     </label>
 
 
-    <label title="range">Sur une échelle de 0 à 100, indiquez votre connaissance d'Internet : <br/>
+    <label title="range">HTML5 knowledge: <br/>
        0 <input type="range"
                name="internetKnowledge"
                min="0"
@@ -42,22 +75,22 @@
                value="1"> 100
     </label>
 
-    <label>A quelle date l'employé a-t-il rejoint votre société ?
+    <label>Hire date:
     <input type="date" name="hiredAt"/>
 
     </label>
 
-    <input type="submit" value="Enregistrer"/>
+    <input type="submit" value="Save"/>
 
 </fieldset>
 #{/form}
 
 #{set 'rightBar'}
-    <P>Liste des fonctions:</P>
+    <P>This page uses:</P>
     <ul>
-        <li>Utilisation de placeholder</li>
-        <li>Utilisation d'autofocus [<a href="http://diveintohtml5.org/forms.html">1</a>]</li>
-
+        <li>input type=email</li>
+        <li>input type=date</li>
+        <li>Set the focus on the first input field [<a href="http://diveintohtml5.org/forms.html">see this article</a>]</li>
     </ul>
 #{/set}
 

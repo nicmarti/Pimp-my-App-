@@ -390,3 +390,41 @@ a:hover {
 #asyncBlotter input {
     font-size:11px;
 }
+
+/*---------------------------------------------------------------*/
+@-webkit-keyframes fade-in {
+0%   { opacity: 0; }
+50%   { opacity: 0; }
+100% { opacity: 1;  }
+}
+
+.success {
+    border-color: #0b0;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #b9ffb9;
+    -moz-box-shadow: 2px 2px 3px #222;
+    -webkit-box-shadow: 2px 2px 3px #222;
+    padding: 8px 12px;
+    text-shadow: none;
+    -webkit-animation-name: fade-in;
+    -webkit-animation-duration: 1.0s;
+    margin-bottom: 15px;
+}
+
+.error {
+    border-color: #b00;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #ffcccc;
+    -moz-box-shadow: 2px 2px 3px #222;
+    -webkit-box-shadow: 2px 2px 3px #222;
+    padding: 8px 12px;
+    text-shadow: none;
+    margin-bottom: 15px;
+}
+
+.errorText {
+    color: #b00;
+    text-shadow: none;
+}

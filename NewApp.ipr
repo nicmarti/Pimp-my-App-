@@ -23,8 +23,17 @@
     </wildcardResourcePatterns>
     <annotationProcessing enabled="false" useClasspath="true" />
   </component>
-  <component name="CopyrightManager" default="">
-    <module2copyright />
+  <component name="CopyrightManager" default="GPL">
+    <copyright>
+      <option name="notice" value="Copyright (C) &amp;#36;today.year Nicolas Martignole&#10;&#10;This program is free software; you can redistribute it and/or&#10;modify it under the terms of the GNU General Public License&#10;as published by the Free Software Foundation; either version 2&#10;of the License, or (at your option) any later version.&#10;&#10;This program is distributed in the hope that it will be useful,&#10;but WITHOUT ANY WARRANTY; without even the implied warranty of&#10;MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the&#10;GNU General Public License for more details.&#10;&#10;You should have received a copy of the GNU General Public License&#10;along with this program; if not, write to the Free Software&#10;Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA." />
+      <option name="keyword" value="Copyright" />
+      <option name="allowReplaceKeyword" value="" />
+      <option name="myName" value="GPL" />
+      <option name="myLocal" value="true" />
+    </copyright>
+    <module2copyright>
+      <element module="All" copyright="GPL" />
+    </module2copyright>
   </component>
   <component name="DependencyValidationManager">
     <option name="SKIP_IMPORT_STATEMENTS" value="false" />
@@ -187,5 +196,18 @@
     <mapping directory="" vcs="Git" />
   </component>
   <component name="WebServicesPlugin" addRequiredLibraries="true" />
+  <component name="libraryTable">
+    <library name="Play 1.1.1">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/../../play-1.1.1/framework/play.jar!/" />
+        <root url="file://$PROJECT_DIR$/../../play-1.1.1/framework/lib" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="file://$PROJECT_DIR$/../../play-1.1.1/framework/src" />
+      </SOURCES>
+      <jarDirectory url="file://$PROJECT_DIR$/../../play-1.1.1/framework/lib" recursive="false" />
+    </library>
+  </component>
 </project>
 

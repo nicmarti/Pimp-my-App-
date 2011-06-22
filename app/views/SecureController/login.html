@@ -2,6 +2,24 @@
 #{set title:'Authentification' /}
 
 #{form @SecureController.authenticate(), class:'niceForm'}
+<!--
+  ~ Copyright (C) 2011 Nicolas Martignole
+  ~
+  ~ This program is free software; you can redistribute it and/or
+  ~ modify it under the terms of the GNU General Public License
+  ~ as published by the Free Software Foundation; either version 2
+  ~ of the License, or (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program; if not, write to the Free Software
+  ~ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+  -->
+
 <fieldset>
 
     #{if flash.error}
@@ -9,22 +27,22 @@
     #{/if}
 
     #{field 'username'}
-    <label>Votre nom d'utilisateur :
+    <label>Your username :
       <input type="text" id="${field.id}" name="${field.name}" value="${field.value}" class="${field.errorClass}"
-              placeholder="Votre identifiant" tabindex="1" autofocus required>
+              placeholder="Your email" tabindex="1" autofocus required>
       <span class="labelError">${field.error}</span></label>
     #{/}
 
     #{field 'password'}
-    <label>Votre mot de passe :
+    <label>Your password :
       <input type="password" id="${field.id}" name="${field.name}" value="${field.value}" class="${field.errorClass}"
-              placeholder="Votre mot de passe" tabindex="2"  required>
+              placeholder="Type-in your password" tabindex="2"  required>
       <span class="labelError">${field.error}</span></label>
     #{/}
-    <input type="submit" value="S'authentifier"/>
+    <input type="submit" value="Authenticate">
 
 </fieldset>
 #{/form}
 
 
-<em>Memo pour la démoi : nicmarti/nicmarti et administrator/admin</em>
+<em>For testing there're 2 profiles : nicmarti/nicmarti and administrator/admin</em>

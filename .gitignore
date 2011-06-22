@@ -1,2 +1,6 @@
 tmp
 logs
+out
+*.iws
+*.ipr
+

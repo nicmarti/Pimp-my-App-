@@ -1,12 +1,30 @@
 #{extends 'main.html' /}
 #{set title:'Page protégée' /}
 
-        <P><strong>Utilisateur authentifié : </strong>${user.username} </P>
-        <P><strong>Administrateur ? </strong>${user.isAdmin} </P>
+        <!--
+  ~ Copyright (C) 2011 Nicolas Martignole
+  ~
+  ~ This program is free software; you can redistribute it and/or
+  ~ modify it under the terms of the GNU General Public License
+  ~ as published by the Free Software Foundation; either version 2
+  ~ of the License, or (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program; if not, write to the Free Software
+  ~ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+  -->
+
+<P><strong>Authenticated user : </strong>${user.username} </P>
+        <P><strong>Is an administrator ? </strong>${user.isAdmin} </P>
 
         #{showForAdmin isAdmin:user.isAdmin}
             <div><h3>Admin panel</h3>
-            <P>Un panel pour les administrateurs uniquement.</P>
+            <P>This panel gets displayed only to admin user.</P>
             </div>
         #{/showForAdmin}
 

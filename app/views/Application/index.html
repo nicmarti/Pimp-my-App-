@@ -1,21 +1,37 @@
 #{extends 'main.html' /}
 #{set title:'Show-room' /}
 
+<h3>Welcome to Pimp! My App</h3>
+<p>I wrote this simple application for a set of presentations and events
+I did in fall 2010 and spring 2011 all around France, Switzerland and Luxembourg.</p>
+<p>For my demo I use a local MySQL DB with 700k entries for BigTable and 50k for BigTableR.
+For the code source version hosted on GitHub, I configured a local db/fs with a
+small bootstrap script.</p>
 
-<P>List des astuces et des exemples présentés</P>
+<p>HTML5/CSS3:</p>
 <ul>
-    <li>#{a @Application.demoHTML5()}Page HTML5#{/a}</li>
-    <li>#{a @employees()}Pagination d'un tableau#{/a}, chargement de chaque page avec Ajax</li>
-    <li>#{a @button()}Boutons et dégradés avec CSS3#{/a}</li>
-    <li>#{a @listFilter()}Recherche filtrée#{/a} avec jQuery</li>
-    <li>#{a @niceForm()}Formulaire HTML5#{/a}</li>
-    <li>#{a @SecureController.login()}Authentification et autorisation#{/a} avec Play! Framework</li>
-    <li>#{a @BigPage.index()}Test de chargement tableau voumineux#{/a}</li>
-    <li>#{a @BigPage.yahooTableSorted()}Tableau avancé#{/a} avec Yahoo! UI</li>
-    <li>#{a @BigPage.yahoochart()}Yahoo! Chart#{/a}</li>
-    <li>#{a @BigPage.autocomplete()}Autocomplete#{/a} avec Yahoo! UI</li>
-    <li>#{a @Demo.index()}Démo Play! Framework#{/a}</li>
-    <li>#{a @Application.minitel()}La B.V.A.T.P#{/a}</li>
-    <li>#{a @AsyncBlotter.index()}AsyncBlotter#{/a}</li>
-    <li>#{a @Demo.indexDemo()}Bordeaux JUG#{/a}</li>
+    <li>#{a @Application.demoHTML5()}A simple HTML5 page#{/a}</li>
+    <li>#{a @employees()}How to paginate a table with jQuery in 2 minuts#{/a}</li>
+    <li>#{a @button()}Nice CSS3 button#{/a}</li>
+    <li>#{a @listFilter()}jQuery search with autofilter#{/a} a client-side to filter a list of items</li>
+    <li>#{a @niceForm()}Pimp my Form !#{/a} show new HTML5 form features.</li>
 </ul>
+<p>Code source samples:</p>
+<ul>
+    <li>#{a @SecureController.login()}Authentication and authorization#{/a} with Play! Framework</li>
+    <li>#{a @BigPage.index()}Load and paginate a large set of data#{/a}</li>
+    <li>#{a @BigPage.yahooTableSorted()}Look mah!, no JSF #{/a} sorted table with Yahoo! UI</li>
+    <li>#{a @BigPage.yahoochart()}Yahoo! Chart#{/a} for your manager</li>
+    <li>#{a @BigPage.autocomplete()}Autocomplete#{/a} with Yahoo! UI</li>
+    <li>#{a @Demo.index()}Démo Play! Framework#{/a}</li> this is the source code of the small app we will write during my presentation
+    <li>#{a @AsyncBlotter.index()}AsyncBlotter#{/a}</li>
+</ul>
+
+<ul>
+    <li>#{a @Application.minitel()}The B.V.A.T.P#{/a} (The Plain Old Crappy Application / La Bonne Vieille Application Toute Pourrie)</li>
+</ul>
+
+
+<h3>Des offres d'emploi pour développeurs passionnés ?</h3>
+<a href="http://www.express-board.fr/"><img border="0" src="@{'/public/images/express-board.png'}" width="550" height="119"/></a>
+

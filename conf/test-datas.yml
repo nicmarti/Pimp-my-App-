@@ -47,3 +47,4 @@ User(u2):
   username: admin
   encryptedPassword: admin
   isAdmin: true
+

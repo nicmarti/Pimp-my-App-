@@ -3,6 +3,24 @@
 Tableau asynchrone
 #{/set}
 
+<!--
+  ~ Copyright (C) 2011 Nicolas Martignole
+  ~
+  ~ This program is free software; you can redistribute it and/or
+  ~ modify it under the terms of the GNU General Public License
+  ~ as published by the Free Software Foundation; either version 2
+  ~ of the License, or (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program; if not, write to the Free Software
+  ~ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+  -->
+
 <P>Exemple avec Play! 1.1, utilisation du long-polling<br/> et de la partie NIO asynchrone de Play!</P>
 
 #{set 'moreScripts'}
@@ -27,7 +45,7 @@ Tableau asynchrone
         <td id="id_${m.id}">${m.id}</td>
         <td id="p1_${m.id}">${m.variable01.round(3)}</td>
         <td id="p2_${m.id}">${m.variable02.round(3)}</td>
-        <td id="date_${m.id}">${m.date.format('DD MMM yyyy HH:mm:ss')}</td>
+        <td id="date_${m.id}">${m.lastUpdated.format('DD MMM yyyy HH:mm:ss')}</td>
     </tr>
     #{/list}
 </table>
