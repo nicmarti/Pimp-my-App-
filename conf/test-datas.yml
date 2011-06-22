@@ -48,3 +48,71 @@ User(u2):
   encryptedPassword: admin
   isAdmin: true
 
+Customer(c1):
+  name: Doug Lea
+
+Customer(c2):
+  name: Robert Martin
+
+Customer(c3):
+  name: Martin Odersky
+
+Customer(c4):
+  name: Guillaume Bort
+
+Customer(c5):
+  name: James Gosling
+
+Customer(c6):
+  name: Emmanuel Bernard
+
+Customer(c7):
+  name: Guillaume Laforge
+
+Customer(c8):
+  name: Antonio Goncalves
+
+Customer(c9):
+  name: Joshua Bloch
+
+Customer(c10):
+  name: Morten Kjetland
+
+Customer(c11):
+  name: Erwan Loisant
+
+Customer(c12):
+  name: Sadek Drobi
+
+Customer(c13):
+  name: Nicolas Martignole
+
+Invoice(i1):
+  reference: invoice100
+  amount: 23.20
+  customer: c1
+
+Invoice(i2):
+  reference: invoice101
+  amount: 253.20
+  customer: c2
+
+Invoice(i3):
+  reference: invoice102
+  amount: 100.20
+  customer: c2
+
+Invoice(i4):
+  reference: invoice103
+  amount: 120.00
+  customer: c3
+
+Invoice(i5):
+  reference: invoice104
+  amount: 120.00
+  customer: c4
+
+Invoice(i6):
+  reference: invoice105
+  amount: 103.00
+  customer: c5

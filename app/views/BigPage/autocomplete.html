@@ -25,9 +25,11 @@
 
 #{/set}
 
-<h3>Recherche par région</h3>
+<h3>Search by product number</h3>
+<p>Type the first digits of a product number, the form's value is sent to the server with Ajax. The list of product that starts with the pattern is displayed.</p>
+
 <div id="demo">
-  <input id="ac-input" type="text" placeholder="Entrer le nom d'une région" size="50">
+<label>Show product that starts with:</label>  <input id="ac-input" type="text" placeholder="E.g 3400" size="20">
 </div>
 
 <script type="text/javascript">
@@ -45,4 +47,4 @@ YUI().use("autocomplete", "autocomplete-highlighters", function (Y) {
 </script>
 
 <br/>
-<em>Tapez les premières lettres d'une région en minuscule...</em>
+<em>Type-in the first letter of a product number, such as 30...</em>

@@ -16,9 +16,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import models.BigTable;
-import models.BigTableR;
-import models.Employee;
+import models.*;
 import org.joda.time.DateMidnight;
 import org.joda.time.DateTime;
 import play.Logger;
@@ -40,12 +38,16 @@ public class Bootstrap extends Job {
 
     public void doJob() {
         if (Play.mode == Play.Mode.DEV) {
-            if (Employee.count() == 0) {
-                Fixtures.load("test-datas.yml");
-            }
 
             // BigTable.deleteAll();
             // BigTableR.deleteAll();
+            //
+            Customer.deleteAll();
+            Invoice.deleteAll();
+            Employee.deleteAll();
+            User.deleteAll();
+
+            Fixtures.load("test-datas.yml");
 
             int maxEntries = 2500;
             int maxEntriesR = 500;

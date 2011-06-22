@@ -61,7 +61,7 @@ public class BigPage extends Controller {
 
 
     public static void yahooChart() {
-        List<BigTableR> bigList = BigTableR.find("from BigTableR B where B.localisation='Alsace' order by Period").fetch(50);
+        List<BigTableR> bigList = BigTableR.find("from BigTableR B where B.localisation='Localisation 0' order by product").fetch(50);
         Long count = 500L;
         render(bigList, count);
     }
@@ -70,13 +70,13 @@ public class BigPage extends Controller {
         render();
     }
 
-    public static void search(String q) {
+    public static void search(Long q) {
         List<String> results;
         if (q == null) {
-            results = BigTable.find("select distinct localisation from BigTable order by localisation").fetch(100);
+            results = BigTable.find("select distinct product from BigTableR order by product").fetch(100);
         } else {
-            results = BigTable.find("select distinct localisation from BigTable where localisation like :ploc order by localisation")
-                    .bind("ploc", JavaExtensions.camelCase(q.trim())+"%")
+            results = BigTable.find("select distinct product from BigTableR where product > :ploc order by product")
+                    .bind("ploc", q)
                     .fetch();
         }
         renderJSON(results);
